@@ -17,5 +17,4 @@ class CartPage:
         self.firstname.fill(firstname)
         self.lastname.fill(lastname)
         self.postalCode.fill(postalcode)
-        sleep(3)
         self.continuee.click()

@@ -11,14 +11,12 @@ class inventoryPage:
         self.bikeLight = page.locator("[data-test=\"add-to-cart-sauce-labs-bike-light\"]")
         self.jacket = page.locator("[data-test=\"add-to-cart-sauce-labs-fleece-jacket\"]")
         self.tShirtRed = page.locator("[data-test=\"add-to-cart-test\\.allthethings\\(\\)-t-shirt-\\(red\\)\"]")
-        self.cart_badge = page.locator("[data-test=\"shopping-cart-badge\"]")
         self.cartlink = page.locator("[data-test=\"shopping-cart-link\"]")
         
-    def AddToCart(self, expectedcount=1, *args):
+    def AddToCart(self, *args):
         for arg in args:
             if arg.is_visible():
                 arg.click()
-                sleep(3)
             else:
                 break
     def goToCard(self):
